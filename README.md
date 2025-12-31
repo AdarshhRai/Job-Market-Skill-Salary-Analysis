@@ -64,25 +64,35 @@ Both queries were cleaned and standardized by:
 * Cleaning and trimming text
 * Splitting multi-skill fields
 
-**Job Data Transformations**
-![Power Query – Job Data Steps](/0_Resources/Images/2_Project_Analysis_Screenshot1.png)
+📊 data_jobs_all
 
-**Skills Data Transformations**
-![Power Query – Skills Steps](/0_Resources/Images/2_Project_Analysis_Screenshot2.png)
+<img width="244" height="312" alt="image" src="https://github.com/user-attachments/assets/b82f68c9-26dd-492d-b9cf-7d1002751fed" />
+
+🛠️ data_job_skills
+
+<img width="243" height="328" alt="image" src="https://github.com/user-attachments/assets/1f661a59-892b-406c-a5b8-ab32dbe0c96c" />
+
 
 #### 🔗 Load
 
 Both transformed tables were loaded into the workbook to support modeling and analysis.
 
-![Loaded Job Table](/0_Resources/Images/2_Project_Analysis_Screenshot3.png)
-![Loaded Skills Table](/0_Resources/Images/2_Project_Analysis_Screenshot4.png)
+📊 data_jobs_all
+
+<img width="1916" height="649" alt="image" src="https://github.com/user-attachments/assets/5075d5e9-a7da-43dd-8eb6-8683902d4779" />
+
+🛠️ data_job_skills
+
+<img width="1914" height="702" alt="image" src="https://github.com/user-attachments/assets/7e370957-2e61-412f-870b-045617a24628" />
+
 
 ### 📊 Analysis & Insights
 
 * 📈 A positive correlation exists between the **number of skills requested** and **median salary**, especially for senior roles.
 * 💼 Roles with fewer required skills (e.g., Business Analyst) tend to have lower salaries.
 
-![Skills vs Salary Scatter](/0_Resources/Images/2_Project_Analysis_Chart1.png)
+<img width="874" height="537" alt="image" src="https://github.com/user-attachments/assets/4047dd47-3cb3-4670-953e-5d353eaceb68" />
+
 
 **So What:** Specialization and broader skill sets generally lead to higher-paying opportunities.
 
@@ -114,7 +124,7 @@ Median Salary := MEDIAN(data_jobs_all[salary_year_avg])
 * 💼 Senior Data Engineers and Data Scientists earn top salaries globally.
 * 💰 US-based roles generally offer higher compensation than Non-US roles.
 
-![Regional Salary Comparison](/0_Resources/Images/2_Project_Analysis_Chart2.png)
+<img width="1776" height="738" alt="image" src="https://github.com/user-attachments/assets/8badfa59-f256-46d2-90dc-999c0aa4883d" />
 
 **So What:** Location plays a major role in salary negotiations and career planning.
 
@@ -124,20 +134,27 @@ Median Salary := MEDIAN(data_jobs_all[salary_year_avg])
 
 ### 🔧 Power Pivot & Data Modeling
 
+🔗 Data Model
+I created a relationship between my two tables using the job_id column.
+
+<img width="1788" height="1264" alt="image" src="https://github.com/user-attachments/assets/063356c5-2b86-4d84-80ef-53e56ba432f1" />
+
+📃 Power Pivot Menu
+The Power Pivot menu was used to refine my data model and makes it easy to create measures.
+<img width="1918" height="742" alt="image" src="https://github.com/user-attachments/assets/1e505efc-90ae-44c0-b0fe-e18d804bc226" />
+
+
+
 The cleaned tables were integrated into a single data model using `job_id` as a **one-to-many relationship**.
 
-![Data Model Relationship](/0_Resources/Images/2_Project_Analysis_Screenshot5.png)
-
 Power Pivot enabled efficient measure creation and skill-level analysis.
-
-![Power Pivot Menu](/0_Resources/Images/2_Project_Analysis_Screenshot6.png)
 
 ### 📊 Insights
 
 * 💻 **SQL and Python** dominate data job requirements.
 * ☁️ Cloud technologies like **AWS and Azure** are increasingly in demand.
 
-![Top Skills Bar Chart](/0_Resources/Images/2_Project_Analysis_Chart3.png)
+<img width="759" height="513" alt="image" src="https://github.com/user-attachments/assets/664bb8fb-3cb6-4c6d-9e00-c45769d894de" />
 
 **So What:** Focusing on core programming and cloud skills significantly improves employability.
 
@@ -155,9 +172,9 @@ A combo PivotChart was created:
 ### 📊 Insights
 
 * 💰 High-paying skills include **Python, Oracle, and SQL**.
-* 📉 Tools like **Word and PowerPoint** show lower salary association and demand.
+* 📉 Tools like **Word and PowerPoint** show lower salary association and demand in Top 10.
 
-![Top Skills Pay Comparison](/0_Resources/Images/2_Project_Analysis_Chart4.png)
+<img width="862" height="452" alt="image" src="https://github.com/user-attachments/assets/2c5153ef-8bf1-4899-8985-50b90f32f820" />
 
 **So What:** Investing in high-value technical skills yields stronger salary outcomes.
 
