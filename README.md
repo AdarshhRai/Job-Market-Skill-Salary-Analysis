@@ -4,8 +4,6 @@ Built an interactive job market analysis dashboard using Excel Power Query for d
 # Job-Market-Skill-Salary-Analysis
 
 
-## Project 2 Analysis
-
 ## Introduction
 
 As a former job seeker, I was surprised by the lack of clear, data-backed guidance on which **data roles and skills** actually lead to higher pay. This project explores the data science job market to identify **in-demand skills**, **regional salary differences**, and whether **more skills translate into better compensation**—all using advanced Excel analytics.
